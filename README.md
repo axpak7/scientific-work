@@ -1,4 +1,2 @@
 # scientific-work
-numerical methods
-
-some tests
+some work
