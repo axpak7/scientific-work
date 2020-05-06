@@ -8,13 +8,14 @@ x_end = 0.5;
 %n = 2.^[1:23];
 
 for i = 1:23
-    E1(i) = single(abs(simple_version_of_euler(x_start,x_end,n(i)) - solution(x_end)));
-    E2(i) = single(abs(sophisticated_version_of_euler(x_start,x_end,n(i)) - solution(x_end)));
+    E1(i) = abs(runge_kutta4(x_start,x_end,n(i)) - solution(x_end));
+    E2(i) = abs(sophisticated_runge_kutta4(x_start,x_end,n(i)) - solution(x_end));
 end
 
 loglog(h,E1,'-s');
 hold on;
 loglog(h,E2,'-o');
+title('runge kutta 4');
 xlabel('h');
 ylabel('|E|');
 hold off;

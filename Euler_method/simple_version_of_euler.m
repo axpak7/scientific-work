@@ -7,7 +7,7 @@ y=zeros(1,n);
 x(1) = x_0;
 y(1) = 1;
 
-for i = 1:(n)
+for i = 1:n
     term = single(h * dydx(x(i), y(i)));
     y(i+1) = single(y(i) + term);
     x(i+1) = single(x(1) + i*h);
