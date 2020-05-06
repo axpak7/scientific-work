@@ -15,7 +15,7 @@ end
 loglog(h,E1,'-s');
 hold on;
 loglog(h,E2,'-o');
-title('euler method');
+title('Euler method');
 xlabel('h');
 ylabel('|E|');
 hold off;

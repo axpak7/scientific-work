@@ -17,7 +17,7 @@ E2(E2 == 0) = min(E2(E2 ~= 0));
 loglog(h,E1,'-s');
 hold on;
 loglog(h,E2,'-o');
-title('runge kutta 4');
+title('4-order Runge-Kutta method for the equation');
 xlabel('h');
 ylabel('|E|');
 hold off;
