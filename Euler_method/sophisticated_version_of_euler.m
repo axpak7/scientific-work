@@ -1,13 +1,13 @@
 function y_final = sophisticated_version_of_euler(x_0, x_n, n)
-
-%Numerical constants
+%constants
 h = single((x_n-x_0)/(n));
 x=zeros(1,n);
 y=zeros(1,n);
+%initial conditions
 x(1) = x_0;
 y(1) = 1;
 z = single(0);
-
+%algorithm
 for i = 1:n
     term = single(h * dydx(x(i), y(i)) + z);
     newy = single(y(i) + term);

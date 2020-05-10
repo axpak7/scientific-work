@@ -11,10 +11,11 @@ a32=2/3;
 b1=1/4;
 b2=0;
 b3=3/4;
+%initial conditions
 x(1) = x_0;
 y(1) = 1;
 z = 0;
-
+%algorithm
 for i = 1:n
     x(i+1) = x(1) + i*h;
     k1 = dydx(x(i),y(i));

@@ -12,7 +12,6 @@ for i = 1:24
 end
 E2(E2 == 0) = min(E2(E2 ~= 0));
 
-
 loglog(h,E1,'-s');
 hold on;
 loglog(h,E2,'-o');

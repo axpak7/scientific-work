@@ -16,9 +16,10 @@ b1=1/6;
 b2=2/6;
 b3=2/6;
 b4=1/6;
+%initial conditions
 x(1) = x_0;
 y(1) = 1;
-
+%algorithm
 for i = 1:n
     x(i+1) = x(1) + i*h;
     k1 = dydx(x(i),y(i));

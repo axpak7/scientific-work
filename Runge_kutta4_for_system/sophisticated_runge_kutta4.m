@@ -26,7 +26,7 @@ y2(1) = 1;
 y3(1) = 1;
 y4(1) = 1;
 z = [0 0 0 0];
-
+%algorithm
 for i = 1:n
     x(i+1) = x(1) + i*h;
     k11 = dy1dx(x(i),y1(i),y2(i),y3(i),y4(i));

@@ -6,10 +6,11 @@ y = zeros(1,n);
 c2=1/2;
 a21=1/2;
 b2=1;
+%initial conditions
 x(1) = x_0;
 y(1) = 1;
 z = 0;
-
+%algorithm
 for i = 1:n
     x(i+1) = x(1) + i*h;
     k1 = dydx(x(i),y(i));
