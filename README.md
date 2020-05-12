@@ -1,2 +1,2 @@
 # scientific-work
-some work
+diploma
