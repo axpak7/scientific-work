@@ -9,6 +9,7 @@ E2 = zeros(size(n));
 for i = 1:24
     E1(i) = norm(runge_kutta2(x_start,x_end,n(i)) - solution(x_end),Inf);
     E2(i) = norm(sophisticated_runge_kutta2(x_start,x_end,n(i)) - solution(x_end),Inf);
+    disp(i);
 end
 E2(E2 == 0) = min(E2(E2 ~= 0));
 

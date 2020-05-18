@@ -7,8 +7,8 @@ E1 = zeros(size(n));
 E2 = zeros(size(n));
 
 for i = 1:24
-    E1(i) = norm(runge_kutta3(x_start,x_end,n(i)) - solution(x_end),Inf);
-    E2(i) = norm(sophisticated_runge_kutta3(x_start,x_end,n(i)) - solution(x_end),Inf);
+    E1(i) = norm(structural_method2(x_start,x_end,n(i)) - solution(x_end),Inf);
+    E2(i) = norm(sophisticated_structural_method2(x_start,x_end,n(i)) - solution(x_end),Inf);
     disp(i);
 end
 E2(E2 == 0) = min(E2(E2 ~= 0));
@@ -16,7 +16,7 @@ E2(E2 == 0) = min(E2(E2 ~= 0));
 loglog(h,E1,'-s');
 hold on;
 loglog(h,E2,'-o');
-title('3-order Runge-Kutta method for the system');
+title('2-order structural method for system');
 xlabel('h');
 ylabel('|E|');
 hold off;
